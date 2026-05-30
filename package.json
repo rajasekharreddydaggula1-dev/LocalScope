@@ -1,0 +1,15 @@
+{
+  "name": "local-business-directory",
+  "version": "1.0.0",
+  "description": "Local Business Directory Platform",
+  "scripts": {
+    "setup": "npm install && npm run install-all",
+    "install-all": "npm install --prefix backend && npm install --prefix frontend",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm run dev --prefix backend",
+    "client": "npm run dev --prefix frontend"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
